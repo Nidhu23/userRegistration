@@ -1,4 +1,5 @@
 #!/bin/bash -x
+namePattern="^[A-Z][a-z]{2,}"
 
 check(){
 	if [[ $1 =~ $2 ]]
@@ -10,6 +11,6 @@ check(){
  }
 
 read -p "Enter your first Name " name
-
-namePattern="^[A-Z][a-z]{2,}"
 check $name $namePattern
+read -p "Enter your first Name " lastName
+check $lastName $namePattern

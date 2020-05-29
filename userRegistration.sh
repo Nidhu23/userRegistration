@@ -10,9 +10,9 @@ check(){
 	fi
  }
 
-#read -p "Enter your first Name " name
-#check $name $namePattern
-#read -p "Enter your first Name " lastName
-#check $lastName $namePattern
+read -p "Enter your first Name " name
+check $name $namePattern
+read -p "Enter your first Name " lastName
+check $lastName $namePattern
 read -p "Enter your mail id " mail
 check $mail $emailPattern

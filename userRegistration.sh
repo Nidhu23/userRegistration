@@ -1,7 +1,7 @@
 #!/bin/bash 
 namePattern="^[A-Z]+[a-z]{2,}$"
 emailPattern="^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.][a-zA-Z]{2,3}){1,2}$"
-phonePattern="^[0-9]{2}(\s)[0-9]{10}$"
+phonePattern="^[0-9]{2}(\s)?[0-9]{10}$"
 check(){
 	if [[ $1 =~ $2 ]]
 	then

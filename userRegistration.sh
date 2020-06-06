@@ -17,4 +17,10 @@ read -p "Enter your last Name " lastName
 check $lastName $namePattern
 read -p "Enter your mail id " mail
 check $mail $emailPattern
-
+read -p "Enter your phone number " phone
+if [[ $phone =~ $phonePattern ]]
+then
+	echo valid
+else
+	echo invalid
+fi

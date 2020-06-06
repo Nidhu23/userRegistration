@@ -1,6 +1,7 @@
 #!/bin/bash 
-namePattern="^[A-Z][a-z]{2,}"
-emailPattern="^[A-Za-z0-9]*[\-\+\.0-9]*[a-zA-z0-9]+[@][a-z0-9]+[.]+[a-z]{2,3}$"
+namePattern="^[A-Z]+[a-z]{2,}$"
+emailPattern="^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.][a-zA-Z]{2,3}){1,2}$"
+phonePattern="^[0-9]{2}(\s)[0-9]{10}$"
 check(){
 	if [[ $1 =~ $2 ]]
 	then
@@ -12,7 +13,8 @@ check(){
 
 read -p "Enter your first Name " name
 check $name $namePattern
-read -p "Enter your first Name " lastName
+read -p "Enter your last Name " lastName
 check $lastName $namePattern
 read -p "Enter your mail id " mail
 check $mail $emailPattern
+
